@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '我的通知')
+@section('title', 'test')
 
 @section('content')
   <div class="container">
@@ -10,7 +10,7 @@
         <div class="card-body">
 
           <h3 class="text-xs-center">
-            <i class="far fa-bell" aria-hidden="true"></i> 我的通知
+            <i class="far fa-bell" aria-hidden="true"></i> {{trans('forum.notification')}}
           </h3>
           <hr>
 
@@ -25,7 +25,7 @@
             </div>
 
           @else
-            <div class="empty-block">没有消息通知！</div>
+            <div class="empty-block">{{trans('forum.no_notification')}}</div>
           @endif
 
         </div>

@@ -11,7 +11,7 @@
       <div class="card ">
         <div class="card-body">
           <div class="text-center">
-            作者：{{ $topic->user->name }}
+            {{trans('forum.topic_username')}}：{{ $topic->user->name }}
           </div>
           <hr>
           <div class="media">
@@ -47,15 +47,15 @@
             <div class="operate">
               <hr>
               <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
-                <i class="far fa-edit"></i> 编辑
+                <i class="far fa-edit"></i> {{trans('forum.topic_edit')}}
               </a>
               <form action="{{ route('topics.destroy', $topic->id) }}" method="post"
                     style="display: inline-block;"
-                    onsubmit="return confirm('您确定要删除吗？');">
+                    onsubmit="return confirm({{trans('forum.profile_you_sure')}});">
                 {{ csrf_field() }}
                 {{ method_field('DELETE') }}
                 <button type="submit" class="btn btn-outline-secondary btn-sm">
-                  <i class="far fa-trash-alt"></i> 删除
+                  <i class="far fa-trash-alt"></i> {{trans('forum.topic_destroy')}}
                 </button>
               </form>
             </div>

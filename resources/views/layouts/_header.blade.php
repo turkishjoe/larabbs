@@ -11,11 +11,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item {{ active_class(if_route('topics.index')) }}"><a class="nav-link" href="{{ route('topics.index') }}">话题</a></li>
-        <li class="nav-item {{ category_nav_active(1) }}"><a class="nav-link" href="{{ route('categories.show', 1) }}">分享</a></li>
-        <li class="nav-item {{ category_nav_active(2) }}"><a class="nav-link" href="{{ route('categories.show', 2) }}">教程</a></li>
-        <li class="nav-item {{ category_nav_active(3) }}"><a class="nav-link" href="{{ route('categories.show', 3) }}">问答</a></li>
-        <li class="nav-item {{ category_nav_active(4) }}"><a class="nav-link" href="{{ route('categories.show', 4) }}">公告</a></li>
+        <li class="nav-item {{ active_class(if_route('topics.index')) }}"><a class="nav-link" href="{{ route('topics.index') }}">topic</a></li>
+        <li class="nav-item {{ category_nav_active(1) }}"><a class="nav-link" href="{{ route('categories.show', 1) }}">categories1</a></li>
+        <li class="nav-item {{ category_nav_active(2) }}"><a class="nav-link" href="{{ route('categories.show', 2) }}">categories2</a></li>
+        <li class="nav-item {{ category_nav_active(3) }}"><a class="nav-link" href="{{ route('categories.show', 3) }}">categories3</a></li>
+        <li class="nav-item {{ category_nav_active(4) }}"><a class="nav-link" href="{{ route('categories.show', 4) }}">categories4</a></li>
       </ul>
 
     <!-- Right Side Of Navbar -->
@@ -44,24 +44,24 @@
               @can('manage_contents')
                 <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}">
                   <i class="fas fa-tachometer-alt mr-2"></i>
-                  管理后台
+                  {{trans('forum.profile')}}
                 </a>
                 <div class="dropdown-divider"></div>
               @endcan
               <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
                 <i class="far fa-user mr-2"></i>
-                个人中心
+                  {{trans('forum.profile_admin')}}
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">
                 <i class="far fa-edit mr-2"></i>
-                编辑资料
+                  {{trans('forum.profile_edit')}}
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="logout" href="#">
-                <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('您确定要退出吗？');">
+                <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm({{trans('forum.profile_you_sure')}});">
                   {{ csrf_field() }}
-                  <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                  <button class="btn btn-block btn-danger" type="submit" name="button">       {{trans('forum.profile_exit')}} </button>
                 </form>
               </a>
             </div>

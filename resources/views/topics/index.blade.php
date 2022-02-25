@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', isset($category) ? $category->name : '话题列表')
+@section('title', isset($category) ? $category->name : trans('forum.default_category'))
 
 @section('content')
 
@@ -17,12 +17,12 @@
         <ul class="nav nav-pills">
           <li class="nav-item">
             <a class="nav-link {{ active_class( ! if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=default">
-              最后回复
+              {{trans('forum.default')}}
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ active_class(if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=recent">
-              最新发布
+              {{trans('forum.desc')}}
             </a>
           </li>
         </ul>
