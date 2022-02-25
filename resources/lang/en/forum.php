@@ -31,12 +31,17 @@ return [
     'description'=>'description',
     'profile_page'=>'profile page',
     'send'=>'send',
-    'topic_placeholder'=>'topic placeholder',
+    'topic_placeholder'=>'topic comment placeholder',
     'topic_edit'=>'edit',
     'topic_destroy'=>'destory',
     'topic_username'=>'topic username',
     'topic_placeholder_create'=>'topic create',
     'topic_placeholder_category'=>'topic category',
     'topic_placeholder_description'=>'topic description',
-    'topic_placeholder_deleted'=>'topic deleted'
+    'topic_placeholder_deleted'=>'topic deleted',
+
+    'topic_placeholder_update'=>'topic placeholder update！',
+    'topic_placeholder_updated'=>'topic placeholder update！',
+    'topic_comment_updated'=>'comment update',
+    'topic_comment_deleted'=>'comment deleted'
 ];

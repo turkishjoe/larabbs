@@ -67,7 +67,7 @@ class TopicsController extends Controller
         $this->authorize('update', $topic);
         $topic->update($request->all());
 
-        return redirect()->to($topic->link())->with('success', '更新成功！');
+        return redirect()->to($topic->link())->with('success', trans('forum.topic_placeholder_updated'));
     }
 
 	public function destroy(Topic $topic)

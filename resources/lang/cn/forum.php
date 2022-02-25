@@ -37,5 +37,9 @@ return [
     'topic_placeholder_create'=>'请填写标题',
     'topic_placeholder_category'=>'请选择分类',
     'topic_placeholder_description'=>'请填入至少三个字符的内容',
-    'topic_placeholder_deleted'=>'成功删除！'
+    'topic_placeholder_deleted'=>'成功删除！',
+    'topic_placeholder_update'=>'个人资料更新成功！',
+    'topic_placeholder_updated'=>'更新成功！',
+    'topic_comment_updated'=>'评论创建成功!',
+    'topic_comment_deleted'=>'评论删除成功!'
 ];

@@ -22,7 +22,7 @@ class RepliesController extends Controller
         $reply->topic_id = $request->topic_id;
         $reply->save();
 
-        return redirect()->to($reply->topic->link())->with('success', '评论创建成功！');
+        return redirect()->to($reply->topic->link())->with('success', trans('forum.topic_comment_updated'));
     }
 
     public function destroy(Reply $reply)
@@ -30,6 +30,6 @@ class RepliesController extends Controller
         $this->authorize('destroy', $reply);
         $reply->delete();
 
-        return redirect()->to($reply->topic->link())->with('success', '评论删除成功！');
+        return redirect()->to($reply->topic->link())->with('success',  trans('forum.topic_comment_deleted'));
     }
 }
